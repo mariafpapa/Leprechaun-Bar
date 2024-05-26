@@ -16,7 +16,7 @@ html {
 
 @font-face {
     font-family: "American";
-    src: url(/assets/fonts/AMERICAN.TTF);
+    src: url(../assets/fonts/AMERICAN.TTF);
 }
 
 :root {
@@ -28,7 +28,7 @@ html {
 }
 
 body {
-    background-image: url(/assets/img/fondo.png);
+    background-image: url(../assets/img/fondo.png);
     overflow-x: hidden;   
 }
 
