@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/img/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Rowdies:wght@300;400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Rowdies:wght@300;400;700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Rye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/41cabfdf59.js" crossorigin="anonymous"></script>
+    <title>Leprechaun Bar</title>
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="#"><img src="/assets/img/logo.png" alt="logo" ></a>
+        <!--Navbar para escritorio-->
+        <div class="navbar">    
+            <a href="/index.html">INICIO</a>
+            <a href="#nosotros">NOSOTROS</a>
+            <div class="dropdown">
+                <button class="dropbtn">CARTA<i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#carta">MENÚ</a>
+                    <a href="#bebidas">BEBIDAS</a>
+                </div>
+            </div>
+            <a href="#reservas">RESERVAS</a>
+            <a href="#contacto">CONTACTO</a>
+        </div>
+       <!--Menú hamburguesa-->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-toggle-icon"><i class="fa-solid fa-bars"></i></label>
+        <!--Navbar para móviles-->
+        <div class="navbar navbar-phone">
+            <a href="/index.html">INICIO</a>
+            <a href="#nosotros">NOSOTROS</a>
+            <div class="dropdown">
+                <button class="dropbtn">CARTA<i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content dropdown-content-phone">
+                    <a href="#carta">MENÚ</a>
+                    <a href="#bebidas">BEBIDAS</a>
+                </div>
+            </div>
+            <a href="#reservas">RESERVAS</a>
+            <a href="#contacto">CONTACTO</a>
+        </div>
+    </header>
+    <main>
+        <section class="carrousel">
+            <div class="carrousel-caja">
+                <div class="carrousel-elemento">
+                    <img src="/assets/img/happy_hour.png" alt="" class="carrousel-img">
+                </div>
+                <div class="carrousel-elemento">
+                    <img src="/assets/img/karaoke.png" alt="" class="carrousel-img">
+                </div>
+                <div class="carrousel-elemento">    
+                    <img src="/assets/img/cumpleaños.png" alt="" class="carrousel-img">
+                </div>
+                <div class="carrousel-elemento">
+                    <img src="/assets/img/cerveza.png" alt="" class="carrousel-img">
+                </div>
+            </div>
+        </section> 
+        <section id="nosotros" class="nosotros"><h1 >NOSOTROS</h1>
+            <p class="texto">
+                ¡Bienvenidos al Leprechaun, tu destino favorito en el corazón de Rosario!
+                En el Leprechaun, nos inspiramos en la rica mitología irlandesa y en la esencia de los encantadores leprechauns. 
+                Estas pequeñas criaturas, llenas de picardía y misterio, son un símbolo de diversión y buena fortuna. 
+                Al igual que los leprechauns, en nuestro bar buscamos crear un ambiente acogedor y alegre, donde cada visita sea una 
+                experiencia única y memorable. <br><br>
+                Nuestra ubicación privilegiada en el centro de Rosario nos convierte en el punto de encuentro ideal para amigos, 
+                familiares y viajeros que buscan disfrutar de buena compañía y excelentes momentos. Ya sea que estés explorando 
+                la ciudad o buscando un lugar para relajarte después de un largo día, el Leprechaun te ofrece un refugio cálido y 
+                acogedor donde siempre serás recibido con una sonrisa. <br><br>
+                Ven y descubre nuestra amplia selección de cervezas artesanales locales, todo acompañado de deliciosas opciones 
+                gastronómicas que satisfarán incluso a los paladares más exigentes. Además, nuestro equipo está aquí para asegurarse 
+                de que tu experiencia sea excepcional en cada visita.
+                ¡Te esperamos en el Leprechaun para compartir risas, brindis y momentos inolvidables! ¡Sláinte!
+            </p>
+        </section>
+        <section id="carta" class="carta">
+            <h1>CARTA</h1>
+            <section id="menu" class="menu">
+                <h2>MENÚ</h2>
+                <div class="menu-grid">
+                    <div id="menu1" class="menu-item" onclick="toggleIngredients('menu-detail1')">
+                        <h3 class="menu-item-title">Clásica Gourmet</h3>
+                        <img src="/assets/img/clasica_gourmet.jpg" alt="clasica_gourmet" class="menu-item-img">
+                        <div id="menu-detail1"  class="menu-detail">
+                            <p>Hamburguesa casera con jamón y queso</p>
+                        </div>
+                    </div>
+                    <div id="menu2" class="menu-item" onclick="toggleIngredients('menu-detail2')">
+                        <h3 class="menu-item-title">Especial del Chef</h3>
+                        <img src="/assets/img/especial_chef.jpg" alt="especial_chef" class="menu-item-img">
+                        <div id="menu-detail2" class="menu-detail">
+                            <p>Hamburguesa casera con jamón, queso, lechuga, tomate y huevo</p>
+                        </div>
+                    </div>
+                    <div id="menu3" class="menu-item" onclick="toggleIngredients('menu-detail3')">
+                        <h3 class="menu-item-title">Caramelizada Deluxe</h3>
+                        <img src="/assets/img/caramelizada_deluxe.jpg" alt="caramelizada_deluxe" class="menu-item-img">
+                         <div id="menu-detail3" class="menu-detail">
+                            <p>Hamburguesa casera con cebolla caramelizada y queso</p>
+                        </div>
+                    </div>
+                    <div id="menu4" class="menu-item" onclick="toggleIngredients('menu-detail4')">
+                        <h3 class="menu-item-title">Cheddar Crunch</h3>
+                        <img src="/assets/img/cheddar_crunch.jpg" alt="cheddar_crunch" class="menu-item-img">
+                        <div id="menu-detail4" class="menu-detail">
+                            <p>Hamburguesa casera con cheddar y panceta</p>
+                        </div>
+                    </div>
+                    <div id="menu5" class="menu-item" onclick="toggleIngredients('menu-detail5')">
+                        <h3 class="menu-item-title">Gourmet Deluxe</h3>
+                        <img src="/assets/img/gourmet_deluxe.jpg" alt="gourmet_deluxe" class="menu-item-img">
+                        <div id="menu-detail5" class="menu-detail">
+                            <p>Hamburguesa casera con queso, panceta, huevo y cebolla caramelizada</p>
+                        </div>
+                    </div>
+                    <div id="menu6" class="menu-item" onclick="toggleIngredients('menu-detail6')">
+                        <h3 class="menu-item-title">Provoleta Especial</h3>
+                        <img src="/assets/img/provoleta_especial.jpg" alt="provoleta_especial" class="menu-item-img">
+                        <div id="menu-detail6" class="menu-detail">
+                            <p>Hamburguesa casera con provoleta, panceta, tomates y ajíes</p>
+                        </div>
+                    </div>
+                    <div id="menu7" class="menu-item" onclick="toggleIngredients('menu-detail7')">
+                        <h3 class="menu-item-title">Mega Bondiola</h3>
+                        <img src="/assets/img/mega_bondiola.jpg" alt="mega_bondiola" class="menu-item-img">
+                        <div id="menu-detail7" class="menu-detail">
+                            <p>Hamburguesa casera con cheddar, bondiola braseada, panceta, cebolla crocante, huevo y mayonesa picante</p>
+                        </div>
+                    </div>
+                    <div id="menu8" class="menu-item" onclick="toggleIngredients('menu-detail8')">
+                        <h3 class="menu-item-title">Rúcula Delight</h3>
+                        <img src="/assets/img/rucula_delight.jpg" alt="rucula_delight" class="menu-item-img">
+                        <div id="menu-detail8" class="menu-detail">
+                            <p>Hamburguesa casera con rúcula, queso, parmesano en hebras y tomates cherry</p>
+                        </div>
+                    </div>
+                    <div id="menu9" class="menu-item" onclick="toggleIngredients('menu-detail9')">
+                        <h3 class="menu-item-title">Clásicas Crocantes</h3>
+                        <img src="/assets/img/clasicas_crocantes.jpg" alt="clasicas_crocantes" class="menu-item-img">
+                        <div id="menu-detail9" class="menu-detail">
+                            <p>Papas fritas bastón para compartir</p>
+                        </div>
+                    </div>
+                    <div id="menu10" class="menu-item" onclick="toggleIngredients('menu-detail10')">
+                        <h3 class="menu-item-title">Papas Gourmet</h3>
+                        <img src="/assets/img/papas_gourmet.jpg" alt="papas_gourmet" class="menu-item-img">
+                        <div id="menu-detail10" class="menu-detail">
+                            <p>Papas fritas bastón con cheddar, panceta y ciboulette</p>
+                        </div>
+                    </div>
+                    <div id="menu11" class="menu-item" onclick="toggleIngredients('menu-detail11')">
+                        <h3 class="menu-item-title">Batatas Gourmet</h3>
+                        <img src="/assets/img/batatas_gourmet.jpg" alt="batatas_gourmet" class="menu-item-img">
+                        <div id="menu-detail11" class="menu-detail">
+                            <p>Batatas fritas con cheddar, panceta y ciboulette</p>
+                        </div>
+                    </div>
+                    <div id="menu12" class="menu-item" onclick="toggleIngredients('menu-detail12')">
+                        <h3 class="menu-item-title">Delicia Mediterránea</h3>
+                        <img src="/assets/img/delicia_mediterranea.jpg" alt="delicia_mediterranea" class="menu-item-img">
+                        <div id="menu-detail12" class="menu-detail">
+                            <p>Ensalada de rúcula, tomates cherry y parmesano</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="bebidas" class="bebidas">
+                <h2>BEBIDAS</h2>
+                <div class="menu-grid">
+                    <div id="bebida1" class="menu-item">
+                        <h3 class="menu-item-title">Golden Ale</h3>
+                        <div class="bebida-detail">
+                            <p>Nivel de intensidad: <br> BAJO</p>
+                            <P>18 IBU</P>
+                            <P>5% ABV</P>
+                        </div>
+                    </div>
+                    <div id="bebida2" class="menu-item">
+                        <h3 class="menu-item-title">Honey</h3>
+                        <div class="bebida-detail">
+                            <p>Nivel de intensidad: <br> BAJO</p>
+                            <P>11 IBU</P>
+                            <P>4.9% ABV</P>
+                        </div>  
+                    </div>
+                    <div id="bebida3" class="menu-item">
+                        <h3 class="menu-item-title">Red Honey</h3>
+                        <div class="bebida-detail">
+                            <p>Nivel de intensidad: <br> BAJO</p>
+                            <P>15 IBU</P>
+                            <P>4.5% ABV</P>
+                        </div>
+                    </div>
+                    <div id="bebida4" class="menu-item">
+                        <h3 class="menu-item-title">APA</h3>
+                        <div class="bebida-detail">
+                            <p>Nivel de intensidad: MODERADO</p>
+                            <P>34 IBU</P>
+                            <P>5.8% ABV</P>
+                        </div>
+                    </div>
+                    <div id="bebida5" class="menu-item">
+                        <h3 class="menu-item-title">American IPA</h3>
+                        <div class="bebida-detail">
+                            <p>Nivel de intensidad: MODERADO</p>
+                            <P>45 IBU</P>
+                            <P>5.5% ABV</P>
+                        </div>
+                    </div>
+                    <div id="bebida6" class="menu-item">
+                        <h3 class="menu-item-title">Red IPA</h3>
+                        <div class="bebida-detail">
+                            <p>Nivel de intensidad: MODERADO</p>
+                            <P>46 IBU</P>
+                            <P>5.5% ABV</P>
+                        </div>
+                    </div>
+                    <div id="bebida7" class="menu-item">
+                        <h3 class="menu-item-title">Dry Stout</h3>
+                        <div class="bebida-detail">
+                            <p>Nivel de intensidad: INTENSO</p>
+                            <P>28 IBU</P>
+                            <P>6.5% ABV</P>
+                        </div>
+                    </div>
+                    <div id="bebida8" class="menu-item">
+                        <h3 class="menu-item-title">Porter</h3>
+                        <div class="bebida-detail">
+                            <p>Nivel de intensidad: INTENSO</p>
+                            <P>25 IBU</P>
+                            <P>6.5% ABV</P>
+                        </div>
+                    </div>
+                    <div id="bebida9" class="menu-item">
+                        <h3 class="menu-item-title">Brut IPA</h3>
+                        <div class="bebida-detail">
+                            <p>Nivel de intensidad: MODERADO</p>
+                            <P>75 IBU</P>
+                            <P>6% ABV</P>
+                        </div>
+                    </div>
+                    <div id="bebida10" class="menu-item">
+                        <h3 class="menu-item-title">Irish Red Ale</h3>
+                        <div class="bebida-detail">
+                            <p>Nivel de intensidad: MODERADO</p>
+                            <P>24 IBU</P>
+                            <P>4.8% ABV</P>
+                        </div>
+                    </div>
+                    <div id="bebida11" class="menu-item">
+                        <h3 class="menu-item-title">Leprechaun</h3>
+                        <div class="bebida-detail">
+                            <p>Golden Ale <br> de color verde</p>
+                            <P>18 IBU</P>
+                            <P>5% ABV</P>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section id="reservas" class="reservas">
+            <h1 id="titulo-reservas" >RESERVAS</h1>
+            <p class="texto">
+                ¡Preparate para una experiencia inolvidable en el Leprechaun! <br><br>
+                Completa este formulario para que podamos preparar la mesa perfecta para vos. 
+                Estamos deseando crear momentos mágicos juntos. <br><br>
+                Nos pondremos en contacto contigo para cerrar la confirmación y asegurarnos de que tu visita sea realmente 
+                especial. <br>
+                ¡Esperamos verte pronto!
+            </p>
+            <form id="form-reservas" action="" method="get">
+                <fieldset>
+                    <legend class="menu-item-title">Información de Reserva</legend>
+                    <div class="form-control">
+                        <input type="text" name="firstName" id="firstName" placeholder="Nombre" maxlength="15" >
+                        <div id="error-firstname" class="error"></div>
+                    </div>   
+                    <div class="form-control">
+                        <input type="text" name="lastName" id="lastName" placeholder="Apellido" maxlength="15" >
+                        <div id="error-lastname" class="error"></div>
+                    </div>
+                    <div class="form-control">
+                        <input type="tel" name="phone" id="phone"  placeholder="Teléfono">
+                        <div id="error-phone" class="error"></div>
+                    </div>  
+                    <div class="form-control">
+                        <input type="text" name="email-txt" id="email-txt" placeholder="E-mail">
+                        <div id="error-email" class="error"></div>
+                    </div>
+                    <div class="form-control">
+                        <input type="date" name="date" id="date" class="fecha">
+                        <div id="error-date" class="error"></div>
+                    </div>
+                    <div class="form-control">
+                        <select name="hours" id="hours" class="form-select">
+                            <option value="" disabled selected hidden>Hora del evento</option> 
+                            <option value="1">19:30</option>
+                            <option value="2">20:30</option>
+                            <option value="3">21:30</option>
+                            <option value="4">22:30</option>
+                        </select>
+                        <div id="error-hours" class="error"></div>
+                    </div>
+                    <div class="form-control">  
+                        <input type="number" name="num-people" id="num-people" min="1" max="20" inputmode="numeric" placeholder="Número de personas">
+                        <div id="error-num-people" class="error"></div>
+                    </div>
+                    
+                    <input type="submit" value="Enviar"> 
+                    <div id="success-message" class="success"></div>
+                </fieldset>
+            </form>
+        </section>
+        <section id="contacto" class="contacto">
+            <h1 id="titulo-contacto" >CONTACTO</h1> 
+            <div class="contacto-grid">
+                <div class="contacto-item">
+                    <h4 class="contacto-item-title"><i class="fa-solid fa-location-dot"></i><br>Dirección</h4>
+                    <p>Pellegrini 1322</p>
+                    <p>Rosario, Santa Fe, Argentina</p>
+                </div>
+                <div class="contacto-item">
+                    
+                    <h4 class="contacto-item-title"><i class="fa-solid fa-phone"></i><br>Teléfono</h4>
+                    <p>0341 123 4567</p>  
+                </div>
+                <div class="contacto-item">
+                    <i></i>
+                    <h4 class="contacto-item-title"><i class="fa-brands fa-whatsapp"></i><br>WhatsApp</h4>
+                    <p>341 12 34 567</p>  
+                </div>
+                <div class="contacto-item">
+                    <i></i>
+                    <h4 class="contacto-item-title"><i class="fa-regular fa-clock"></i><br>Horarios</h4>
+                    <p>Todos los días</p>  
+                    <p>de 19:00 pm a 02:00 am</p>
+                </div>    
+            </div>
+            <div>
+                <p class="texto texto-mapa">Explora nuestra ubicación.</p>
+                <iframe class="mapa" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.79371973703!2d-60.646512125242346!3d-32.95645517238247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab0e4248bdf7%3A0xb65fb2547513edf6!2sAv.%20Pellegrini%201322%2C%20S2000BUN%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1715977521855!5m2!1ses!2sar" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i><i class="fa-brands fa-square-x-twitter"></i></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i><i class="fa-brands fa-square-instagram"></i></i></a>
+        </div>
+        <p>2024 Leprechaun Bar. Todos los derechos reservados.</p>
+    </footer> 
+    
+    <button id="scrollToTopButton"><i class="fa-solid fa-circle-chevron-up"></i></button>
+</body>
+</html>
